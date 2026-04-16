@@ -1,0 +1,13 @@
+# Dart
+.dart_tool/
+.packages
+build/
+*.iml
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE
+.idea/
+*.swp

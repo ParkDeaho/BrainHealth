@@ -1,0 +1,389 @@
+{
+  "@@locale": "en",
+  "appTitle": "Brain Health",
+  "tabHome": "Home",
+  "tabTests": "Tests",
+  "tabTraining": "Training",
+  "tabReport": "Report",
+  "tabMy": "Profile",
+  "languageSetting": "Language",
+  "languageSystem": "System default",
+  "languageKorean": "Korean",
+  "languageEnglish": "English",
+  "mindRecordTitle": "Today's mood log",
+  "mindRecordSubtitle": "Log once a day — it feeds into your analysis.",
+  "reactionShortcutTitle": "Reaction speed test",
+  "reactionShortcutSubtitle": "Start now · tap when the screen turns green (5 rounds)",
+  "homeQuickMeasureTitle": "Quick cognitive checks",
+  "homeQuickMeasureNumeracySubtitle": "Numeracy reaction — same task as on the Measure tab",
+  "homeQuickMeasureShadowSubtitle": "Visual reasoning — same task as on the Measure tab",
+  "homeQuickMeasureMazeSubtitle": "Path planning — same task as on the Measure tab",
+  "wellnessSectionTitle": "Focus areas (reference)",
+  "summaryCardTitle": "Today's takeaway",
+  "recommendationCardTitle": "Suggestion",
+  "reportSectionFlow": "Today's flow",
+  "reportDementiaSectionTitle": "Dementia prevention (reference)",
+  "reportDementiaSectionBody": "Dementia cannot be diagnosed from a single score, and this app does not predict or diagnose disease. Research and lifestyle guidance often mention sleep, light exercise, social connection, and mentally stimulating activities as helpful for long-term brain health. If you notice memory or thinking changes that worry you, see a clinician.",
+  "flowCardTitlePrefix": "Today's flow: ",
+  "reportNoData": "No analysis data yet. Log your mood or add a test.",
+  "reportPillarsTitle": "Four pillars (today's tests & training)",
+  "reportDetailPillarsTitle": "Detailed cognition (training · numeracy · reasoning · spatial)",
+  "reportWellnessTitle": "Focus areas (tests, training & mood)",
+  "reportDisclaimer": "These numbers are for self-care reference only. They are not medical advice.",
+  "reportActivityTitle": "Today's tests & training",
+  "reportActivityEmpty": "No tests or training saved for today. Complete one from Home to see it here.",
+  "pillMemory": "Memory",
+  "pillFocus": "Focus",
+  "pillReaction": "Reaction",
+  "pillCoordination": "Coordination",
+  "pillNumeracy": "Numeracy",
+  "pillReasoning": "Reasoning",
+  "pillSpatial": "Spatial",
+  "pillDementia": "Brain health",
+  "pillLearning": "Learning",
+  "pillEmotional": "Mood & sleep",
+  "pillNoTestToday": "{label} (no test today)",
+  "@pillNoTestToday": {
+    "placeholders": {
+      "label": {}
+    }
+  },
+  "myPageTitle": "Profile",
+  "selectedMode": "Selected mode",
+  "modeSenior": "Memory / prevention",
+  "modeStudent": "Focus / study",
+  "modeGeneral": "General",
+  "trendsSectionTitle": "Progress (first → latest)",
+  "appInfoTitle": "About",
+  "appInfoSubtitle": "Brain health · stored on device",
+  "onboardingReplayTitle": "Show onboarding again",
+  "onboardingReplayBody": "Return to the first-time setup. Continue?",
+  "cancel": "Cancel",
+  "confirm": "OK",
+  "onboardingTitle": "Brain Health",
+  "onboardingSubtitle": "Healthy habits start with small daily steps.",
+  "onboardingSeniorTitle": "Memory / prevention",
+  "onboardingSeniorSubtitle": "Adults · memory care · cognitive habits",
+  "onboardingStudentTitle": "Focus / study",
+  "onboardingStudentSubtitle": "Students · focus · study routine",
+  "onboardingGeneralTitle": "General",
+  "onboardingGeneralSubtitle": "Overall brain wellness",
+  "onboardingStart": "Get started",
+  "testsHubTitle": "Cognitive tests",
+  "trainingHubTitle": "Brain training",
+  "testWordMemoryTitle": "Word memory",
+  "testWordMemoryDesc": "Memorize and recall 5 words",
+  "testDigitSpanTitle": "Digit span",
+  "testDigitSpanDesc": "Remember digits in reverse order",
+  "testVisualPatternTitle": "Visual pattern",
+  "testVisualPatternDesc": "Recall lit cells on the grid",
+  "testStroopTitle": "Stroop",
+  "testStroopDesc": "Pick the ink color quickly",
+  "testReactionTitle": "Reaction time",
+  "testReactionDesc": "Tap as soon as the screen changes",
+  "testCptTitle": "Sustained attention (CPT)",
+  "testCptDesc": "Tap when you see X",
+  "testMeasureNumeracyDesc": "Short numeracy reaction test with addition and subtraction (10 items). Same task as Quick math on the Train tab.",
+  "testMeasureShadowDesc": "Visual reasoning: pick the matching silhouette (8 rounds). Same task as Find the shadow on the Train tab.",
+  "testMeasureMazeDesc": "Path planning to the exit by tapping adjacent cells. Same task as Maze on the Train tab.",
+  "testCoordinationTitle": "Left–right coordination",
+  "testCoordinationDesc": "Tap the highlighted side quickly (12 rounds)",
+  "trainCoordinationTitle": "Coordination practice",
+  "trainCoordinationDesc": "Hand–eye coordination · short rounds (8)",
+  "trainNumeracyTitle": "Quick math",
+  "trainNumeracyDesc": "Add & subtract to train numeracy (10 items)",
+  "trainShadowTitle": "Find the shadow",
+  "trainShadowDesc": "Pick the matching silhouette · problem solving (8 rounds)",
+  "trainMazeTitle": "Maze",
+  "trainMazeDesc": "Tap adjacent path cells to the flag · spatial route (presets)",
+  "tagCoordination": "Coordination",
+  "tagNumeracy": "Numeracy",
+  "tagReasoning": "Reasoning",
+  "tagSpatial": "Spatial",
+  "coordinationAppBar": "Left–right coordination",
+  "coordinationInstructions": "When the cue appears, tap the highlighted side (left or right). Wrong side or too slow counts as a miss.",
+  "coordinationPrepare": "Get ready…",
+  "coordinationCueLeft": "Left",
+  "coordinationCueRight": "Right",
+  "coordinationRoundProgress": "Round {n} / {total}",
+  "@coordinationRoundProgress": {
+    "placeholders": {
+      "n": {},
+      "total": {}
+    }
+  },
+  "coordinationSnackDone": "Avg {avgMs} ms · accuracy {accPct}% · {score} pts",
+  "@coordinationSnackDone": {
+    "placeholders": {
+      "avgMs": {},
+      "accPct": {},
+      "score": {}
+    }
+  },
+  "numeracyAppBar": "Quick math",
+  "numeracyInstructions": "Pick the correct answer. Accuracy and response time affect your score.",
+  "numeracyProgress": "Item {n} / {total}",
+  "@numeracyProgress": {
+    "placeholders": {
+      "n": {},
+      "total": {}
+    }
+  },
+  "numeracySnackDone": "Correct {correct} / {total} · {score} pts",
+  "@numeracySnackDone": {
+    "placeholders": {
+      "correct": {},
+      "total": {},
+      "score": {}
+    }
+  },
+  "shadowAppBar": "Find the shadow",
+  "shadowInstructions": "Choose the filled silhouette that matches the outline above.",
+  "shadowProgress": "Round {n} / {total}",
+  "@shadowProgress": {
+    "placeholders": {
+      "n": {},
+      "total": {}
+    }
+  },
+  "shadowTargetLabel": "Which shadow matches?",
+  "shadowPickLabel": "Choices",
+  "shadowSnackDone": "Correct {correct} / {total} · {score} pts",
+  "@shadowSnackDone": {
+    "placeholders": {
+      "correct": {},
+      "total": {},
+      "score": {}
+    }
+  },
+  "mazeAppBar": "Maze",
+  "mazeInstructions": "Tap adjacent open cells to reach the flag. Walls (#) block you.",
+  "mazeMoves": "Moves: {n}",
+  "@mazeMoves": {
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "mazeSnackDone": "{moves} moves (shortest {shortest}) · {score} pts",
+  "@mazeSnackDone": {
+    "placeholders": {
+      "moves": {},
+      "shortest": {},
+      "score": {}
+    }
+  },
+  "tagDementia": "Brain health",
+  "tagLearning": "Learning",
+  "tagFocus": "Focus",
+  "trainCardMatchTitle": "Card match",
+  "trainCardMatchDesc": "Find matching pairs",
+  "trainNbackTitle": "N-back",
+  "trainNbackDesc": "Decide if it matches N steps back",
+  "trainSequenceTitle": "Sequence memory",
+  "trainSequenceDesc": "Remember and replay the light order",
+  "trainSelectiveTitle": "Selective attention",
+  "trainSelectiveDesc": "Tap only the target shape",
+  "trainBreathingTitle": "Breathing · focus reset",
+  "trainBreathingDesc": "1 min breathing · mic or manual",
+  "tagEmotionalSleep": "Mood & sleep",
+  "tagStressMood": "Stress & low mood self-care",
+  "mindMoodTitle": "How is your mood today?",
+  "mindStressTitle": "Stress level today?",
+  "mindAnxietyTitle": "How anxious do you feel?",
+  "mindMotivationTitle": "How motivated do you feel?",
+  "mindSleepTitle": "Sleep last night",
+  "mindNoteTitle": "Short note",
+  "mindNoteHint": "e.g. Busy day, felt scattered",
+  "mindSave": "Save",
+  "mindSavedHint": "Today's log is saved and used in analysis.",
+  "mindSaveDone": "Saved.",
+  "mindScoreCurrent": "Current score: {n}",
+  "@mindScoreCurrent": {
+    "placeholders": {
+      "n": {}
+    }
+  },
+  "sleepHoursItem": "{h} h",
+  "@sleepHoursItem": {
+    "placeholders": {
+      "h": {}
+    }
+  },
+  "moodVeryBad": "Very bad",
+  "moodBad": "Bad",
+  "moodNeutral": "OK",
+  "moodGood": "Good",
+  "moodVeryGood": "Very good",
+  "sleepHoursHint": "Choose",
+  "reactionAppBar": "Reaction time",
+  "reactionTapWhenGreen": "Tap!",
+  "reactionWaitGreen": "Wait for green… ({round}/5)",
+  "@reactionWaitGreen": {
+    "placeholders": {
+      "round": {}
+    }
+  },
+  "reactionSnackDone": "Avg {avgMs} ms · saved · {score} pts",
+  "@reactionSnackDone": {
+    "placeholders": {
+      "avgMs": {},
+      "score": {}
+    }
+  },
+  "cardMatchTitle": "Card match",
+  "insightSumEmotionalHeavy": "Mood, tension or anxiety feels heavy today. Prefer short breaks and light movement before hard tasks. (Self-check only.)",
+  "insightSumDementiaGood": "Memory and reaction training are going well — from a “cognitive stimulation” habit angle, today looks solid for long-term brain care. (App scores are not a diagnosis.)",
+  "insightSumLearningGood": "Focus and memory look strong — a good day for study or deep work.",
+  "insightSumStressFocus": "Stress may be shaking your focus today.",
+  "insightSumMoodMemory": "Memory feels stable and organized today.",
+  "insightSumMotivationLow": "Motivation is low — short tasks fit better than long ones.",
+  "insightSumSleep": "Short sleep may slow reaction time and focus.",
+  "insightSumDefault": "Overall steady. Keep the rhythm — small daily habits for sleep, movement, social time, and memory games can support brain health over time. (Reference only.)",
+  "insightSumDementiaEncourage": "Today’s pattern looks a bit light on memory, focus, and reaction working together. Dementia isn’t judged from one score, but adding gentle cognitive stimulation over time can support brain health. (Not medical advice.)",
+  "insightRecEmotionalCare": "Care for mood and sleep first. Walk, talk, breathe — then add short memory games when you feel better. (Seek help if low mood persists.)",
+  "insightRecStressNoBreath": "Stress feels high. Try 1 min breathing, then Stroop or selective attention to settle focus.",
+  "insightRecStress": "Start with 1 min breathing, then a short focus task.",
+  "insightRecMotivation": "Begin with easy games to build small wins.",
+  "insightRecDementiaLow": "For brain-health habits, try alternating card match, word memory, and visual pattern. (This app isn’t a clinical test — seek care if you’re worried.)",
+  "insightRecLearningLow": "Add focus drills: Stroop, N-back, or CPT in short bursts.",
+  "insightRecMemory": "Try card match or sequence memory today — repeating memory tasks can also help build habits often linked with long-term cognitive care.",
+  "insightRecFocus": "Try Stroop or selective attention first.",
+  "insightRecReaction": "A short reaction-time drill can wake your senses.",
+  "insightRecCoordinationLow": "Hand–eye coordination looks a bit uneven. Short daily left–right drills can build habits that also support everyday movement. (Reference only.)",
+  "insightRecNumeracyLow": "Today’s numeracy score looks low. Try alternating short numeracy and sequence-memory tasks. (Scores are informational only.)",
+  "insightRecReasoningLow": "Shadow matching looks low today. Repeat short visual comparison rounds once a day. (Scores are informational only.)",
+  "insightRecSpatialLow": "Maze score looks low today. Try planning the path ahead or short spatial tasks regularly. (Scores are informational only.)",
+  "insightRecDefault": "Keep a light 3-minute routine — regular cognitive play fits well alongside other brain-health habits.",
+  "insightForEmotionalCalm": "Mood has some room — a good day to add memory and focus work.",
+  "insightForMoodMotivationMemory": "Memory and engagement line up well today.",
+  "insightForStress": "Go slow and double-check — a better flow than rushing.",
+  "insightForMotivationLow": "Finish small easy tasks first — that builds momentum.",
+  "insightForDementiaHigh": "Steady cognitive stimulation — easy to keep a rhythm that supports long-term brain care. (Scores are reference only.)",
+  "insightForLearningHigh": "Focus and memory support study or work immersion.",
+  "insightForFocusHigh": "Focus is strong — tackle important work early.",
+  "insightForCoordinationHigh": "Left–right taps look fairly crisp today — easy to keep a steady motor rhythm. (Reference only.)",
+  "insightForDefault": "Keep a steady pace without overdoing it — brain-health habits are built in small steps over time.",
+  "trendNoRecords": "No saved records yet. Add tests, training, or a mood log.",
+  "trendAccumulated": "{count} tests & training · active days {days}",
+  "@trendAccumulated": {
+    "placeholders": {
+      "count": {},
+      "days": {}
+    }
+  },
+  "trendMindDays": "{days} days of mood logs",
+  "@trendMindDays": {
+    "placeholders": {
+      "days": {}
+    }
+  },
+  "trendNeedMoreDays": "As you add more days, we can compare your earliest and latest scores.",
+  "trendMoodFirstLast": "Mood log: first {a} → latest {b}",
+  "@trendMoodFirstLast": {
+    "placeholders": {
+      "a": {},
+      "b": {}
+    }
+  },
+  "trendCompare": "Compare: {from} → {to}",
+  "@trendCompare": {
+    "placeholders": {
+      "from": {},
+      "to": {}
+    }
+  },
+  "trendPillarLine": "{name} {from} → {to} {delta}",
+  "@trendPillarLine": {
+    "placeholders": {
+      "name": {},
+      "from": {},
+      "to": {},
+      "delta": {}
+    }
+  },
+  "trendMoodRecord": "Mood (log) {a} → {b}",
+  "@trendMoodRecord": {
+    "placeholders": {
+      "a": {},
+      "b": {}
+    }
+  },
+  "trendNameMemory": "Memory",
+  "trendNameFocus": "Focus",
+  "trendNameReaction": "Reaction",
+  "trendNameCoordination": "Coordination",
+  "trendNameNumeracy": "Numeracy",
+  "trendNameReasoning": "Reasoning (shadow)",
+  "trendNameSpatial": "Spatial (maze)",
+  "trendNameDementia": "Brain health ref.",
+  "trendNameLearning": "Learning ref.",
+  "trendNameEmotional": "Mood & sleep ref.",
+  "trendDeltaFlat": "flat",
+  "trendDeltaUp": "up",
+  "trendDeltaDown": "down",
+  "testTypeMemory": "Memory",
+  "testTypeFocus": "Focus",
+  "testTypeBreathing": "Breathing",
+  "testTypeStroop": "Stroop",
+  "testTypeCpt": "Attention",
+  "testTypeReaction": "Reaction",
+  "testTypeCoordination": "Coordination",
+  "testTypeNumeracy": "Quick math",
+  "testTypeShadow": "Shadow match",
+  "testTypeMaze": "Maze",
+  "reportLineTimeScore": "{time} · score {score}",
+  "@reportLineTimeScore": {
+    "placeholders": {
+      "time": {},
+      "score": {}
+    }
+  },
+  "reportBreathingDetail": "Breathing {n}/4 · {mode}",
+  "@reportBreathingDetail": {
+    "placeholders": {
+      "n": {},
+      "mode": {}
+    }
+  },
+  "breathModeMic": "Mic",
+  "breathModeManual": "Manual",
+  "localAiTitle": "Local AI (Ollama)",
+  "localAiMenuTitle": "Local AI chat",
+  "localAiMenuSubtitle": "Ollama on your PC only · no cloud",
+  "localAiDisclaimer": "Messages go only to Ollama running on your network or device. Nothing is sent to the public internet. Not medical advice.",
+  "localAiOllamaSetupHint": "If connection fails: install Ollama and keep it running (Windows: tray icon, or run ollama serve in a terminal). Pull a model with e.g. ollama pull llama3.2. Check Settings that the URL is http://127.0.0.1:11434 (default).",
+  "localAiErrConnectionRefused": "Nothing is listening on port 11434 — Ollama is probably not running. Start Ollama, then tap Test connection again.",
+  "localAiErrTimeout": "The request timed out. Try again, or wait if the model is large.",
+  "localAiErrDnsFailed": "Could not resolve the server address. Check the URL in Settings (e.g. http://127.0.0.1:11434).",
+  "localAiErrEmptyBase": "Server URL is empty. Open Settings and enter the Ollama address.",
+  "localAiErrUnexpectedResponse": "Could not parse the server response. Check that the model name in Settings matches an installed model.",
+  "localAiSettingsTitle": "Ollama connection",
+  "localAiBaseUrlLabel": "Server URL",
+  "localAiModelLabel": "Model name",
+  "localAiSave": "Save",
+  "localAiHintEmulator": "Android emulator: http://10.0.2.2:11434 · Physical device: your PC LAN IP (e.g. http://192.168.0.10:11434)",
+  "localAiMessageHint": "Type a message",
+  "localAiThinking": "Generating…",
+  "localAiTestConnection": "Test connection",
+  "localAiTesting": "Checking…",
+  "localAiPingOk": "Connected to Ollama.",
+  "localAiPingFail": "Connection failed: {msg}",
+  "@localAiPingFail": {
+    "placeholders": {
+      "msg": {}
+    }
+  },
+  "localAiErrorGeneric": "Could not get a reply.\n{detail}",
+  "@localAiErrorGeneric": {
+    "placeholders": {
+      "detail": {}
+    }
+  },
+  "localAiSpeechUnavailable": "Speech recognition is not available on this device. Type your message instead.",
+  "localAiMicListen": "Speak",
+  "localAiMicStop": "Stop",
+  "localAiSpeakReply": "Read aloud",
+  "localAiListening": "Listening…",
+  "localAiOpenOllamaDownload": "Open Ollama download page",
+  "localAiCouldNotOpenLink": "Could not open the link."
+}

@@ -1,0 +1,9 @@
+{
+  "web": {
+    "latestVersion": "1.0.0",
+    "minRequiredVersion": "0.0.0",
+    "forceUpdate": false,
+    "updateUrl": "/",
+    "message": "더 안정적인 사용을 위해 최신 버전으로 업데이트가 필요합니다."
+  }
+}

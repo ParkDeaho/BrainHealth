@@ -1,0 +1,83 @@
+BrainTrain Flutter 뼈대 (flutter_app/)
+
+=== Windows에서 "flutter 인식 안 됨"일 때 ===
+저장소 루트(D:\AppProjects\BrainTrain)에서 PowerShell:
+
+  powershell -ExecutionPolicy Bypass -File .\tools\install_flutter_windows.ps1
+
+- Flutter stable SDK를 flutter_sdk\ 폴더에 받고, 사용자 PATH에 ...\flutter_sdk\flutter\bin 을 추가합니다.
+- 설치 후 터미널/IDE를 한 번 닫았다가 다시 열어야 "flutter"가 잡힐 수 있습니다. Cursor를 쓰는 경우 Cursor 자체를 한 번 종료했다가 열면 PATH가 반영되는 경우가 많습니다.
+
+PATH 없이 바로 실행 — 저장소 루트에서 (어느 폴더에서든 루트 경로만 맞추면 됨):
+
+  flutter_bundle.cmd --version
+  cd flutter_app
+  ..\flutter_bundle.cmd pub get
+  ..\flutter_bundle.cmd run -d windows
+
+PATH 없이 — flutter_app 폴더에서:
+
+  flutter_local.cmd run -d windows
+  flutter_local.cmd doctor
+  flutter_local.cmd pub get
+
+  ※ PowerShell에서 .ps1 이 막히면(실행 정책): 위처럼 .cmd 를 쓰거나
+     powershell -ExecutionPolicy Bypass -File .\flutter_local.ps1 run -d windows
+
+또는 한 줄(PowerShell):
+
+  $env:Path = "D:\AppProjects\BrainTrain\flutter_sdk\flutter\bin;$env:Path"; flutter run -d windows
+
+=== Windows 데스크톱 실행이 "symlink" / Developer Mode 오류일 때 ===
+Flutter(플러그인 포함)는 Windows에서 빌드 시 심볼릭 링크가 필요합니다.
+설정에서 「개발자 모드」를 켜 주세요.
+
+  Win + R → ms-settings:developers 입력 → Enter
+  또는: 설정 → 개인 정보 보호 및 보안 → 개발자용 → 개발자 모드 켜기
+
+PC 재시작은 보통 필요 없습니다. 적용 후 새 터미널에서:
+
+  cd D:\AppProjects\BrainTrain\flutter_app
+  .\flutter_local.ps1 run -d windows
+
+※ Chrome/Edge(web)만으로는 이 프로젝트가 동작하지 않습니다. Drift(SQLite)가
+  웹에서 dart:ffi를 쓰기 때문입니다. Windows/Android/iOS 등 네이티브 대상을 쓰세요.
+
+※ Android 에뮬이 API 25 등으로 "unsupported"이면, AVD를 API 29+ 로 새로 만든 뒤
+  flutter run 하면 됩니다.
+
+=== Windows: 로컬 AI 답변 읽기(TTS) — NuGet 불필요 ===
+이전에는 flutter_tts 플러그인이 nuget.exe를 요구했습니다. 현재는 Windows에서
+PowerShell(System.Speech)로 읽어 주며, 별도 NuGet 설치가 필요 없습니다.
+(Android/iOS는 네이티브 TTS MethodChannel 사용)
+
+- pub get만: powershell -ExecutionPolicy Bypass -File .\run_pub_get.ps1
+
+1) Flutter SDK 설치 후 이 폴더에서 플랫폼 폴더가 없으면 한 번 생성합니다.
+
+   flutter create . --project-name braintrain_flutter
+
+2) 패키지 설치
+
+   flutter pub get
+
+3) Drift 코드 생성 (필수 — *.g.dart 생성)
+
+   dart run build_runner build --delete-conflicting-outputs
+
+   개발 중 자동 재생성:
+
+   dart run build_runner watch --delete-conflicting-outputs
+
+4) 실행
+
+   flutter run
+
+참고: Drift 생성 파일(app_database.g.dart, daily_condition_dao.g.dart, test_result_dao.g.dart)은 3번 실행 후 생성됩니다.
+
+앱 구조 (요약)
+- lib/main.dart → bootstrap() → ProviderScope + BrainTrainApp
+- lib/app/brain_train_app.dart : 온보딩 여부 로딩 후 OnboardingPage 또는 MainShell
+- lib/features/shell/main_shell.dart : 하단 탭(홈·측정·훈련·리포트·마이)
+- lib/features/home, tests, training, report, mind_check, onboarding, mypage
+- Drift 로컬 DB + MindInsightEngine / TodayAnalysisService
