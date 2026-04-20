@@ -1,0 +1,13 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "mybrainhealth",
+          "appId": "1:597361891322:android:1ecb4d15798906884af643",
+          "fileOutput": "android/app/google-services.json"
+        }
+      }
+    }
+  }
+}

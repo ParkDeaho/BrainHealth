@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// 온보딩·모드 저장 (웹 프로필과 유사)
@@ -7,11 +8,21 @@ class AppPrefs {
   static const keyOnboarded = 'has_onboarded';
   static const keyMode = 'user_mode';
   static const keyLocale = 'app_locale';
+
+  /// [setLocaleCode]에 저장되는 "시스템 언어 따름" 표시값.
+  static const localeCodeSystem = 'system';
   static const keyOllamaBaseUrl = 'ollama_base_url';
   static const keyOllamaModel = 'ollama_model';
 
-  /// Ollama HTTP API (예: http://127.0.0.1:11434). 끝에 / 없음.
-  static const defaultOllamaBaseUrl = 'http://127.0.0.1:11434';
+  /// Ollama HTTP API (끝에 / 없음).
+  /// Android(에뮬→호스트 PC) 기본은 [10.0.2.2](https://developer.android.com/studio/run/emulator-networking);
+  /// iOS·데스크톱·웹은 루프백.
+  static String get defaultOllamaBaseUrl {
+    if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
+      return 'http://10.0.2.2:11434';
+    }
+    return 'http://127.0.0.1:11434';
+  }
 
   /// 로컬에 `ollama pull` 로 받은 모델명
   static const defaultOllamaModel = 'llama3.2';
@@ -42,7 +53,7 @@ class AppPrefs {
     await p.remove(keyOnboarded);
   }
 
-  /// null = 시스템 언어, 'ko' | 'en'
+  /// null·빈 값 = 저장된 선택 없음(앱 기본 한국어). [localeCodeSystem] = 기기 설정 언어. 'ko' | 'en'
   static Future<String?> getLocaleCode() async {
     final p = await SharedPreferences.getInstance();
     return p.getString(keyLocale);

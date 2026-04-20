@@ -216,8 +216,8 @@ class _LocalAiChatPageState extends ConsumerState<LocalAiChatPage> {
               const SizedBox(height: 6),
               TextField(
                 controller: urlCtrl,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
                   hintText: AppPrefs.defaultOllamaBaseUrl,
                 ),
                 keyboardType: TextInputType.url,

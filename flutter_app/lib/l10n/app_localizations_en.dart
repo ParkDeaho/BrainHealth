@@ -399,6 +399,9 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get mazeNewPuzzle => 'New maze';
+
+  @override
   String get tagDementia => 'Brain health';
 
   @override
@@ -782,7 +785,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get localAiOllamaSetupHint =>
-      'If connection fails: install Ollama and keep it running (Windows: tray icon, or run ollama serve in a terminal). Pull a model with e.g. ollama pull llama3.2. Check Settings that the URL is http://127.0.0.1:11434 (default).';
+      'If connection fails: install Ollama on your PC from the download page (pick Windows or macOS for your computer — not Linux for the emulator). Keep it running (Windows: tray icon, or ollama serve). Pull a model, e.g. ollama pull llama3.2. On Android emulator the app defaults to http://10.0.2.2:11434 in Settings; on a physical phone use your PC\'s LAN IP. Desktop app uses http://127.0.0.1:11434.';
 
   @override
   String get localAiErrConnectionRefused =>

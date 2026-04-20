@@ -384,6 +384,9 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String get mazeNewPuzzle => '새 미로';
+
+  @override
   String get tagDementia => '치매 예방';
 
   @override
@@ -756,7 +759,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get localAiOllamaSetupHint =>
-      '연결이 안 되면: PC에 Ollama를 설치·실행했는지 확인하세요. Windows에서는 트레이의 Ollama 아이콘 또는 터미널에서 ollama serve 가 동작해야 합니다. 모델은 ollama pull llama3.2 등으로 받을 수 있습니다. 설정의 주소가 http://127.0.0.1:11434 인지 확인하세요.';
+      '연결이 안 되면: 다운로드 페이지에서 본인 PC OS용(Windows·macOS 등)으로 Ollama를 설치·실행하세요. 에뮬레이터 안 리눅스용 패키지가 아닙니다. Windows는 트레이 아이콘 또는 터미널의 ollama serve 가 떠 있어야 합니다. 모델은 ollama pull llama3.2 등으로 받습니다. Android 에뮬레이터에서는 설정 주소가 http://10.0.2.2:11434 인지 확인하세요(앱 기본값). 실제 폰은 PC의 Wi‑Fi IP(예: 192.168.x.x)를 쓰고, 데스크톱 앱은 http://127.0.0.1:11434 입니다.';
 
   @override
   String get localAiErrConnectionRefused =>

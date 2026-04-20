@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597361891322",
+    "project_id": "mybrainhealth",
+    "storage_bucket": "mybrainhealth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597361891322:android:1ecb4d15798906884af643",
+        "android_client_info": {
+          "package_name": "com.parker.mybrainhealth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCQB2fiNddCH3NlNSbTrjhqwTaxOczEMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

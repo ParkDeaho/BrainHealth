@@ -1,3 +1,5 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -46,6 +48,10 @@ class _BrainTrainAppState extends ConsumerState<BrainTrainApp> {
 
     return MaterialApp(
       locale: locale,
+      navigatorObservers: [
+        if (Firebase.apps.isNotEmpty)
+          FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+      ],
       onGenerateTitle: (ctx) => AppLocalizations.of(ctx)!.appTitle,
       theme: ThemeData(
         useMaterial3: true,

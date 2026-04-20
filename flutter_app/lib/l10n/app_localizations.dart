@@ -794,6 +794,12 @@ abstract class AppLocalizations {
   /// **'{moves} moves (shortest {shortest}) · {score} pts'**
   String mazeSnackDone(Object moves, Object shortest, Object score);
 
+  /// No description provided for @mazeNewPuzzle.
+  ///
+  /// In en, this message translates to:
+  /// **'New maze'**
+  String get mazeNewPuzzle;
+
   /// No description provided for @tagDementia.
   ///
   /// In en, this message translates to:
@@ -1451,7 +1457,7 @@ abstract class AppLocalizations {
   /// No description provided for @localAiOllamaSetupHint.
   ///
   /// In en, this message translates to:
-  /// **'If connection fails: install Ollama and keep it running (Windows: tray icon, or run ollama serve in a terminal). Pull a model with e.g. ollama pull llama3.2. Check Settings that the URL is http://127.0.0.1:11434 (default).'**
+  /// **'If connection fails: install Ollama on your PC from the download page (pick Windows or macOS for your computer — not Linux for the emulator). Keep it running (Windows: tray icon, or ollama serve). Pull a model, e.g. ollama pull llama3.2. On Android emulator the app defaults to http://10.0.2.2:11434 in Settings; on a physical phone use your PC\'s LAN IP. Desktop app uses http://127.0.0.1:11434.'**
   String get localAiOllamaSetupHint;
 
   /// No description provided for @localAiErrConnectionRefused.

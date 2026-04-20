@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import 'package:braintrain_flutter/core/ads/interstitial_ad_helper.dart';
+import 'package:braintrain_flutter/core/ads/shell_bottom_banner.dart';
 import 'package:braintrain_flutter/l10n/app_localizations.dart';
 
 import '../home/home_page.dart';
@@ -18,6 +22,22 @@ class MainShell extends StatefulWidget {
 
 class _MainShellState extends State<MainShell> {
   int _index = 0;
+  /// 리포트 탭에서 전면을 실제로 띄운 뒤에는 같은 세션에서 반복 노출하지 않음.
+  bool _interstitialConsumedForReportTab = false;
+
+  Future<void> _maybeShowReportInterstitial() async {
+    if (_interstitialConsumedForReportTab) {
+      return;
+    }
+    await Future<void>.delayed(Duration.zero);
+    if (!mounted) {
+      return;
+    }
+    final showed = InterstitialAdHelper.instance.showIfReady();
+    if (showed) {
+      _interstitialConsumedForReportTab = true;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,34 +61,45 @@ class _MainShellState extends State<MainShell> {
           MyPage(),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
-        destinations: [
-          NavigationDestination(
-            icon: const Icon(Icons.home_outlined),
-            selectedIcon: const Icon(Icons.home),
-            label: titles[0],
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.science_outlined),
-            selectedIcon: const Icon(Icons.science),
-            label: titles[1],
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.sports_esports_outlined),
-            selectedIcon: const Icon(Icons.sports_esports),
-            label: titles[2],
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.bar_chart_outlined),
-            selectedIcon: const Icon(Icons.bar_chart),
-            label: titles[3],
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.person_outline),
-            selectedIcon: const Icon(Icons.person),
-            label: titles[4],
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const ShellBottomBanner(),
+          NavigationBar(
+            selectedIndex: _index,
+            onDestinationSelected: (i) {
+              setState(() => _index = i);
+              if (i == 3) {
+                unawaited(_maybeShowReportInterstitial());
+              }
+            },
+            destinations: [
+              NavigationDestination(
+                icon: const Icon(Icons.home_outlined),
+                selectedIcon: const Icon(Icons.home),
+                label: titles[0],
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.science_outlined),
+                selectedIcon: const Icon(Icons.science),
+                label: titles[1],
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.sports_esports_outlined),
+                selectedIcon: const Icon(Icons.sports_esports),
+                label: titles[2],
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.bar_chart_outlined),
+                selectedIcon: const Icon(Icons.bar_chart),
+                label: titles[3],
+              ),
+              NavigationDestination(
+                icon: const Icon(Icons.person_outline),
+                selectedIcon: const Icon(Icons.person),
+                label: titles[4],
+              ),
+            ],
           ),
         ],
       ),

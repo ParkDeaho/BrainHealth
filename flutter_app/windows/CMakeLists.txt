@@ -2,6 +2,11 @@
 cmake_minimum_required(VERSION 3.14)
 project(braintrain_flutter LANGUAGES CXX)
 
+# firebase_core Windows 네이티브: VS 2022(v143)·CMake 3.22+ 권장. VS2019면 LNK2019 가능 — SETUP.txt 참고.
+if(WIN32 AND MSVC AND DEFINED MSVC_VERSION AND MSVC_VERSION VERSION_LESS 1930)
+  message(WARNING "MSVC ${MSVC_VERSION}: firebase_core Windows 빌드는 VS 2022 권장. Android 에뮬은 영향 없음.")
+endif()
+
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
 set(BINARY_NAME "braintrain_flutter")

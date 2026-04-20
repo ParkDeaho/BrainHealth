@@ -12,11 +12,21 @@ class LocaleNotifier extends StateNotifier<Locale?> {
 
   Future<void> hydrate() async {
     final code = await AppPrefs.getLocaleCode();
-    state = _toLocale(code);
+    if (code == null || code.isEmpty) {
+      state = const Locale('ko');
+      return;
+    }
+    if (code == AppPrefs.localeCodeSystem) {
+      state = null;
+      return;
+    }
+    state = _toLocale(code) ?? const Locale('ko');
   }
 
   Locale? _toLocale(String? code) {
-    if (code == null || code.isEmpty) return null;
+    if (code == null || code.isEmpty) {
+      return null;
+    }
     switch (code) {
       case 'ko':
         return const Locale('ko');
@@ -29,10 +39,11 @@ class LocaleNotifier extends StateNotifier<Locale?> {
 
   Future<void> setLocale(Locale? locale) async {
     if (locale == null) {
-      await AppPrefs.setLocaleCode(null);
+      await AppPrefs.setLocaleCode(AppPrefs.localeCodeSystem);
+      state = null;
     } else {
       await AppPrefs.setLocaleCode(locale.languageCode);
+      state = locale;
     }
-    state = locale;
   }
 }

@@ -23,6 +23,9 @@ dependencies:
   http: ^1.2.2
   speech_to_text: ^7.0.0
   url_launcher: ^6.3.1
+  firebase_core: ^4.7.0
+  firebase_analytics: ^12.3.0
+  google_mobile_ads: ^8.0.0
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +33,7 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   drift_dev: ^2.18.0
   build_runner: ^2.4.9
+  flutter_launcher_icons: ^0.14.4
 
 # Windows: upstream speech_to_text_windows sends invalid JSON (missing alternates).
 dependency_overrides:
@@ -39,3 +43,15 @@ dependency_overrides:
 flutter:
   generate: true
   uses-material-design: true
+
+# dart run flutter_launcher_icons — 마스터: assets/icons/app_icon.png
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icons/app_icon.png
+  adaptive_icon_background: "#6C63FF"
+  adaptive_icon_foreground: assets/icons/app_icon.png
+  remove_alpha_ios: true
+  windows:
+    generate: true
+    image_path: assets/icons/app_icon.png
