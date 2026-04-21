@@ -1,0 +1,12 @@
+# 이 파일을 복사해 android/key.properties 로 저장한 뒤 값을 채우세요.
+# key.properties · *.jks 는 git에 올리지 마세요 (.gitignore 됨).
+#
+# keystore 생성 (android 폴더에서 실행 예):
+# keytool -genkeypair -v -storetype PKCS12 -keystore app/upload-keystore.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000
+#
+# storeFile 은 이 프로젝트 기준 android/app/ 에 두는 경우 파일명만 적으면 됩니다.
+
+storePassword=
+keyPassword=
+keyAlias=upload
+storeFile=upload-keystore.jks

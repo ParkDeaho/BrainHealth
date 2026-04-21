@@ -1,7 +1,7 @@
 name: braintrain_flutter
 description: 나의 뇌 건강 — Flutter 뼈대 (Drift + Riverpod 마음 기록·분석)
 publish_to: 'none'
-version: 0.1.0+1
+version: 0.1.0+11
 
 environment:
   sdk: '>=3.3.0 <4.0.0'

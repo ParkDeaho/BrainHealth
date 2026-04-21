@@ -26,3 +26,6 @@ dist-ssr
 # 로컬 Flutter SDK (install_flutter_windows.ps1)
 flutter_sdk/
 .flutter_download_cache/
+
+# Play 번들은 용량이 커서 저장소에 포함하지 않음
+docs/store-assets/*.aab
